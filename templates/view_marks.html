@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Marks</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>View Marks</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mark in marks %}
+            <tr>
+                <td>{{ mark[0] }}</td>
+                <td>{{ mark[1] }}</td>
+                <td>{{ mark[2] }}</td>
+                <td>{{ mark[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

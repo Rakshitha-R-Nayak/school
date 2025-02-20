@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Teachers</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>All Teachers</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subject</th>
+        </tr>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher[0] }}</td>
+            <td>{{ teacher[1] }}</td>
+            <td>{{ teacher[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/add_teacher">Add New Teacher</a>
+    <a href="/">Back</a>
+</body>
+</html>

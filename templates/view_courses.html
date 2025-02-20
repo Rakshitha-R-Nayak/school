@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Courses</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>All Courses</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Teacher ID</th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+            <td>{{ course[0] }}</td>
+            <td>{{ course[1] }}</td>
+            <td>{{ course[2] }}</td>
+            <td>{{ course[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back</a>
+</body>
+</html>
